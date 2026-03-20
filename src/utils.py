@@ -21,7 +21,7 @@ def generateBoard():
     each row i is a location i
     each x in column j is the cost to move from location i to location j
     
-    x is a random multiple of 5 between 5 and 100
+    x is a random multiple of 5 between 5 and 100, symmetrical around the diagonal
     '''
     
     return board
