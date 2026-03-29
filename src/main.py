@@ -9,7 +9,12 @@ board = utils.generateBoard()
 utils.printBoard(board)
 
 greedyCost=greedy.greedy(board)
-geneticPath, geneticCost = genetic.genetic(board)
+geneticPath, geneticCost = genetic.genetic(
+    board,
+    popSize=200,
+    generations=500,
+    mutationRate=0.05
+)
 # bfsCost=bfs.bfs(board)
 # dfsCost=dfs.dfs(board)
 
@@ -18,10 +23,10 @@ print(f'Greedy = {greedyCost}')
 print(f'Genetic = {geneticCost}')
 
 print("\nBest paths:")
-print(f"Genetic Path = {geneticPath}")
+print(f"Genetic Path = {geneticPath}\n")
+print(f'aStarTsp = ')
+aStarTsp.aStarTsp(board)
 # print(f'BFS = {bfsCost}')
 # print(f'DFS = {dfsCost}')
-print(f'aStarTsp = ')
-aStarTsp(board)
 
 #add whatever other searches u used
