@@ -3,6 +3,7 @@ import greedy
 import genetic
 # import bfs
 # import dfs
+import aStarTsp #might need .py
 
 board = utils.generateBoard()
 utils.printBoard(board)
@@ -20,5 +21,7 @@ print("\nBest paths:")
 print(f"Genetic Path = {geneticPath}")
 # print(f'BFS = {bfsCost}')
 # print(f'DFS = {dfsCost}')
+print(f'aStarTsp = ')
+aStarTsp(board)
 
 #add whatever other searches u used
