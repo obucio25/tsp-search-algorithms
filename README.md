@@ -12,6 +12,7 @@ We implemented and compared multiple algorithms:
 - Greedy Search
 - A* Search
 - Genetic Algorithm (Evolutionary Computing)
+- Simulated Annealing
 
 Each algorithm is tested on randomly generated distance matrices.
 
@@ -64,6 +65,31 @@ The Genetic Algorithm (GA) uses principles of **evolutionary computing** to iter
 - Consistently outperforms Greedy Search
 - Often matches A* solution quality
 - More scalable for larger problem sizes
+
+---
+
+### 🔹 Simulated Annealing (`simulatedAnnealing.py`)
+Simulated Annealing is a probabilistic local search algorithm inspired by the metallurgical process of slowly cooling heated metal to reduce defects.
+
+#### Key Features:
+- Starts from a random tour
+- Generates neighbors by swapping two random cities
+- Always accepts improvements
+- **Accepts worse solutions probabilistically** to escape local optima
+- Temperature decreases over time, gradually reducing exploration
+
+#### How it works:
+1. Generate a random initial tour
+2. Swap two random cities to produce a neighboring tour
+3. If the neighbor is better, accept it
+4. If the neighbor is worse, accept it with probability e^(-Δ/T)
+5. Reduce the temperature each iteration
+6. Repeat until temperature falls below the minimum threshold
+
+#### Performance:
+- Consistently outperforms Greedy Search
+- Competitive with Genetic Algorithm on smaller problem sizes
+- Solution quality varies between runs due to random starting tour
 
 ---
 
