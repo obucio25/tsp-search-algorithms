@@ -1,6 +1,7 @@
 import utils
 import greedy
 import genetic
+import simulatedAnnealing
 # import dfs
 import aStarTsp
 
@@ -15,14 +16,17 @@ geneticPath, geneticCost = genetic.genetic(
     mutationRate=0.05
 )
 # dfsCost=dfs.dfs(board)
+saCost, saPath = simulatedAnnealing.simulatedAnnealing(board)
 
 print("\nCost to make all sales using:")
 print(f'Greedy = {greedyCost}')
 print(f'Genetic = {geneticCost}')
+print(f'Simulated Annealing = {saCost}')
 
 print("\nBest paths:")
 print(f'Greedy Path = {greedyPath}')
-print(f"Genetic Path = {geneticPath}\n")
+print(f"Genetic Path = {geneticPath}")
+print(f'Simulated Annealing Path = {saPath}')
 print(f'aStarTsp = ')
 aStarTsp.aStarTsp(board)
 # print(f'DFS = {dfsCost}')
