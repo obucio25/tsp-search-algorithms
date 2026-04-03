@@ -4,7 +4,7 @@ import genetic
 import dfs
 import aStarTsp
 
-board = utils.generateBoard(10) # 10x10
+board = utils.generateBoard(10) # generateBoard(n) makes an n x n board
 utils.printBoard(board)
 
 greedyCost, greedyPath = greedy.greedy(board)
